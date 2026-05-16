@@ -130,18 +130,10 @@ body::after {
   animation-delay: -2.35s;
 }
 
-body.cursor-idle .cursor-field__glow {
-  opacity: 0.38;
-}
-
+body.cursor-idle .cursor-field__glow { opacity: 0.38; }
 body.cursor-idle .cursor-field::before,
-body.cursor-idle .cursor-field::after {
-  opacity: 0.42;
-}
-
-body.is-navigating .cursor-field__glow {
-  opacity: 0.62;
-}
+body.cursor-idle .cursor-field::after { opacity: 0.42; }
+body.is-navigating .cursor-field__glow { opacity: 0.62; }
 
 .hero,
 .contacts-page,
@@ -164,15 +156,92 @@ body.is-navigating .cursor-field__glow {
   pointer-events: none;
 }
 
+.section-anchor {
+  display: grid;
+  min-height: 100svh;
+  align-items: center;
+  padding: 7rem clamp(1.2rem, 5vw, 5rem) 4rem;
+  overflow: hidden;
+  scroll-margin-top: 0;
+}
+
+.section-anchor::before {
+  display: block;
+  width: min(48rem, 100%);
+  color: rgba(246, 247, 255, 0.92);
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  font-weight: 300;
+  line-height: 1.55;
+  white-space: pre-line;
+  animation: page-rise 860ms cubic-bezier(0.18, 0.8, 0.22, 1) both;
+}
+
+#about::before {
+  content: "ОБО МНЕ\A\AГолос, который держит внимание и не мешает истории.\A\AРаботаю с дубляжом, закадровой озвучкой, персонажами и подачей для проектов, где голос должен звучать чисто, уверенно и живо.";
+}
+
+#services::before {
+  content: "УСЛУГИ\A\AОзвучка, дубляж и голосовая сборка под разные форматы.\A\AМожно прийти с роликом, сценой, текстом, персонажем или идеей. Звучание собирается под задачу, а не под шаблон.";
+}
+
+#portfolio::before {
+  content: "ПОРТФОЛИО\A\AПримеры работ будут собраны в одном месте.\A\AСюда можно добавлять видео, аудиодемо, ссылки на проекты и отдельные карточки по типам озвучки.";
+}
+
+#demo {
+  grid-template-columns: minmax(18rem, 0.85fr) minmax(18rem, 1fr);
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+#demo::before {
+  content: "SLIMEVR —\Aсвобода движения\Aв виртуальной реальности\A\AБеспроводные трекеры полного тела, которые дарят свободу движений в VR. Созданы энтузиастами для энтузиастов.";
+  align-self: center;
+  max-width: 38rem;
+  color: rgba(246, 247, 255, 0.96);
+  font-size: clamp(1.25rem, 3vw, 3rem);
+  line-height: 1.25;
+  text-transform: none;
+}
+
+#demo::after {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  content: "";
+  background:
+    radial-gradient(ellipse at 72% 56%, rgba(126, 113, 255, 0.28), transparent 28rem),
+    radial-gradient(ellipse at 45% 54%, rgba(134, 217, 255, 0.08), transparent 24rem),
+    url("./slimevr-trackers.svg") right 8% center / min(54vw, 52rem) auto no-repeat;
+  opacity: 0.96;
+  transform: translate3d(calc(var(--cursor-parallax-x) * -0.32), calc(var(--cursor-parallax-y) * -0.22), 0);
+  will-change: transform;
+}
+
+.site-nav a[href="#demo"] {
+  font-size: 0;
+}
+
+.site-nav a[href="#demo"]::before {
+  content: "SLIMEVR";
+  font-size: 0.82rem;
+}
+
+.hero__button[href="#demo"] span {
+  font-size: 0;
+}
+
+.hero__button[href="#demo"] span::before {
+  content: "Подробнее о SlimeVR";
+  font-size: 1.02rem;
+}
+
 .hero__wave {
   animation: wave-float 16s ease-in-out infinite;
   filter: drop-shadow(0 0 1.4rem rgba(132, 142, 255, 0.1));
   will-change: translate, opacity;
 }
 
-.hero__wave--right {
-  animation-delay: -6.5s;
-}
+.hero__wave--right { animation-delay: -6.5s; }
 
 .site-header,
 .hero__eyebrow,
@@ -214,14 +283,10 @@ body.is-navigating .cursor-field__glow {
   animation: voice-bar 1.75s ease-in-out infinite;
 }
 
-.brand__mark span:nth-child(2),
-.voice-mark span:nth-child(2) { animation-delay: -0.42s; }
-.brand__mark span:nth-child(3),
-.voice-mark span:nth-child(3) { animation-delay: -0.78s; }
-.brand__mark span:nth-child(4),
-.voice-mark span:nth-child(4) { animation-delay: -1.08s; }
-.brand__mark span:nth-child(5),
-.voice-mark span:nth-child(5) { animation-delay: -1.34s; }
+.brand__mark span:nth-child(2), .voice-mark span:nth-child(2) { animation-delay: -0.42s; }
+.brand__mark span:nth-child(3), .voice-mark span:nth-child(3) { animation-delay: -0.78s; }
+.brand__mark span:nth-child(4), .voice-mark span:nth-child(4) { animation-delay: -1.08s; }
+.brand__mark span:nth-child(5), .voice-mark span:nth-child(5) { animation-delay: -1.34s; }
 
 .site-nav a {
   position: relative;
@@ -292,12 +357,7 @@ body.is-navigating .cursor-field__glow {
   transform: skewX(-18deg) translateX(420%);
 }
 
-.contact-link > *,
-.hero__button > *,
-.welcome__button > *,
-.contacts-cta__button > *,
-.admin-entry > *,
-.admin-button > * {
+.contact-link > *, .hero__button > *, .welcome__button > *, .contacts-cta__button > *, .admin-entry > *, .admin-button > * {
   position: relative;
   z-index: 1;
 }
@@ -310,9 +370,7 @@ body.is-navigating .cursor-field__glow {
   animation: point-pulse 2.7s ease-in-out infinite;
 }
 
-.scroll-cue__line::after {
-  animation-name: scroll-dot;
-}
+.scroll-cue__line::after { animation-name: scroll-dot; }
 
 .socials a {
   transition: color 180ms ease, filter 180ms ease, opacity 180ms ease, transform 180ms ease;
@@ -389,9 +447,28 @@ body.is-navigating .cursor-field__glow {
   50% { transform: translate3d(-5%, -3%, 0) scale(1.08); }
 }
 
+@media (max-width: 920px) {
+  #demo {
+    grid-template-columns: 1fr;
+    align-content: start;
+  }
+
+  #demo::before {
+    font-size: clamp(1.35rem, 7vw, 2.8rem);
+  }
+
+  #demo::after {
+    background:
+      radial-gradient(ellipse at 50% 70%, rgba(126, 113, 255, 0.26), transparent 26rem),
+      url("./slimevr-trackers.svg") center bottom 7% / min(92vw, 34rem) auto no-repeat;
+    opacity: 0.72;
+  }
+}
+
 @media (max-width: 720px) {
   .hero__content { transform: none; }
   .cursor-field__glow { width: 28rem; }
+  .section-anchor { padding: 8rem 1.2rem 3rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
