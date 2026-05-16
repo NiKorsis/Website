@@ -31,7 +31,7 @@ jobs:
       - name: Prepare static files
         run: |
           mkdir dist
-          cp index.html styles.css script.js dist/
+          cp index.html styles.css animations.css contacts.css script.js slimevr-trackers.svg dist/
           touch dist/.nojekyll
 
       - name: Upload artifact
