@@ -10,6 +10,7 @@
     <title>KorsDub site</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./animations.css" />
+    <link rel="stylesheet" href="./contacts.css" />
   </head>
   <body>
     <main class="site-shell" id="siteShell" aria-label="Главная страница свободы">
@@ -135,7 +136,106 @@
       <section class="section-anchor" id="services" aria-label="Услуги"></section>
       <section class="section-anchor" id="portfolio" aria-label="Портфолио"></section>
       <section class="section-anchor" id="demo" aria-label="Демо"></section>
-      <section class="section-anchor" id="contacts" aria-label="Контакты"></section>
+
+      <section class="contacts-page" id="contacts" aria-labelledby="contactsTitle">
+        <div class="contacts-page__wave contacts-page__wave--left" aria-hidden="true"></div>
+        <div class="contacts-page__wave contacts-page__wave--right" aria-hidden="true"></div>
+
+        <div class="contacts-page__inner">
+          <div class="contacts-page__intro">
+            <span class="voice-mark" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <h2 class="contacts-page__title" id="contactsTitle">Контакты</h2>
+            <p class="contacts-page__subtitle">Команда, с которой можно связаться по проекту</p>
+            <button class="admin-entry" id="adminOpenButton" type="button">Профиль администратора</button>
+          </div>
+
+          <div class="contacts-grid" id="contactsGrid" aria-live="polite"></div>
+
+          <section class="contacts-links" id="contactsLinks" aria-labelledby="contactsLinksTitle">
+            <h3 class="contacts-links__title" id="contactsLinksTitle">Дополнительные ссылки</h3>
+            <div class="contacts-links__list" id="contactsLinksList"></div>
+          </section>
+
+          <section class="contacts-cta" aria-label="Обсудить проект">
+            <div class="contacts-cta__wave" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <h3 class="contacts-cta__title" id="contactsCtaTitle">Есть задача? Свяжитесь с нами</h3>
+              <p class="contacts-cta__text" id="contactsCtaText">
+                Расскажите о проекте — подберём команду и предложим лучшее решение для вашей задачи.
+              </p>
+            </div>
+            <a class="contacts-cta__button" id="contactsCtaButton" href="mailto:nikorsis666@gmail.com">
+              <span>Обсудить проект</span>
+              <svg
+                aria-hidden="true"
+                width="34"
+                height="18"
+                viewBox="0 0 34 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 9H31M24 1.5L31.5 9L24 16.5"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </section>
+
+          <footer class="contacts-footer" aria-label="Контакты и социальные сети">
+            <div class="socials">
+              <a href="https://t.me/MAD_DUBING" aria-label="Telegram MAD DUBING">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M21 4.6 17.9 20c-.2 1.1-.8 1.4-1.7.9l-4.7-3.5-2.3 2.2c-.2.3-.5.5-1 .5l.4-4.8L17.4 7c.4-.4-.1-.6-.6-.2L6 13.6 1.4 12.2c-1-.3-1-1 0-1.4l18-7c.8-.3 1.6.2 1.6.8Z" />
+                </svg>
+              </a>
+              <a href="https://boosty.to/mad_dub" aria-label="Boosty MAD DUB">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M6.4 3h7.2c3.2 0 5.4 1.9 5.4 4.8 0 1.8-.9 3.2-2.4 3.9 1.7.6 2.8 2.1 2.8 4 0 3.1-2.4 5.3-5.8 5.3H6.4V3Zm3.2 2.8v4.7h3.5c1.6 0 2.6-.9 2.6-2.4s-1-2.3-2.6-2.3H9.6Zm0 7.3v5.1h3.8c1.7 0 2.8-1 2.8-2.6s-1.1-2.5-2.8-2.5H9.6Z" />
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@KORS_DUB" aria-label="YouTube KORS DUB">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M21.6 7.1a3 3 0 0 0-2.1-2.1C17.6 4.5 12 4.5 12 4.5s-5.6 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.9 3 3 0 0 0 2.1 2.1c1.9.5 7.5.5 7.5.5s5.6 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.9ZM10 15.5v-7l6 3.5-6 3.5Z" />
+                </svg>
+              </a>
+              <a href="https://discord.gg/squtTpyJFT" aria-label="Discord MAD DUB">
+                <svg aria-hidden="true" viewBox="0 0 24 24" style="fill: currentColor; stroke: none">
+                  <path d="M18.5 5.3A15 15 0 0 0 14.8 4l-.2.4c1.3.3 2 .8 2.9 1.4a12.2 12.2 0 0 0-11 0c.9-.6 1.8-1.1 2.9-1.4L9.2 4a15 15 0 0 0-3.7 1.3C3.2 8.7 2.6 12 2.9 15.2A14.8 14.8 0 0 0 7.4 17.5l.9-1.2c-.5-.2-1-.5-1.5-.8l.4-.3c2.9 1.3 6.1 1.3 8.9 0l.4.3c-.5.3-1 .6-1.5.8l.9 1.2a14.8 14.8 0 0 0 4.5-2.3c.4-3.7-.6-6.9-2.9-9.9ZM9 13.4c-.9 0-1.6-.8-1.6-1.7S8.1 10 9 10s1.6.8 1.6 1.7-.7 1.7-1.6 1.7Zm6 0c-.9 0-1.6-.8-1.6-1.7S14.1 10 15 10s1.6.8 1.6 1.7-.7 1.7-1.6 1.7Z" />
+                </svg>
+              </a>
+            </div>
+
+            <a class="scroll-cue" href="#home">
+              <span>Наверх</span>
+              <span class="scroll-cue__line" aria-hidden="true"></span>
+            </a>
+
+            <a class="contacts-footer__email" id="contactsEmail" href="mailto:nikorsis666@gmail.com">
+              nikorsis666@gmail.com
+            </a>
+          </footer>
+        </div>
+      </section>
     </main>
 
     <section class="welcome" id="welcomeScreen" aria-labelledby="welcomeTitle">
@@ -185,7 +285,147 @@
       </div>
     </section>
 
+    <section class="admin-panel" id="adminPanel" aria-hidden="true">
+      <div class="admin-panel__backdrop" data-admin-close></div>
+      <div class="admin-panel__dialog" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+        <div class="admin-panel__top">
+          <div>
+            <h2 class="admin-panel__title" id="adminTitle">Профиль администратора</h2>
+            <p class="admin-panel__hint">Логин: admin. Пароль: admin. Данные сохраняются в этом браузере.</p>
+            <p class="admin-panel__status" id="adminStatus" aria-live="polite"></p>
+          </div>
+          <button class="admin-close" type="button" aria-label="Закрыть" data-admin-close>×</button>
+        </div>
+
+        <form class="admin-login" id="adminLoginForm">
+          <div class="admin-grid">
+            <label class="admin-field">
+              <span>Логин</span>
+              <input id="adminLogin" name="login" autocomplete="username" required />
+            </label>
+            <label class="admin-field">
+              <span>Пароль</span>
+              <input id="adminPassword" name="password" type="password" autocomplete="current-password" required />
+            </label>
+          </div>
+          <div class="admin-actions">
+            <button class="admin-button" type="submit">Войти</button>
+          </div>
+        </form>
+
+        <div class="admin-workspace" id="adminWorkspace" hidden>
+          <form class="admin-form" id="siteSettingsForm">
+            <h3 class="admin-form__title">Контактная информация</h3>
+            <div class="admin-grid">
+              <label class="admin-field">
+                <span>Почта</span>
+                <input id="contactEmailInput" type="email" />
+              </label>
+              <label class="admin-field">
+                <span>Кнопка: ссылка</span>
+                <input id="ctaButtonHrefInput" placeholder="mailto:name@example.com или https://..." />
+              </label>
+              <label class="admin-field">
+                <span>Заголовок блока</span>
+                <input id="ctaTitleInput" />
+              </label>
+              <label class="admin-field">
+                <span>Кнопка: текст</span>
+                <input id="ctaButtonTextInput" />
+              </label>
+              <label class="admin-field admin-field--wide">
+                <span>Описание блока</span>
+                <textarea id="ctaTextInput"></textarea>
+              </label>
+            </div>
+            <div class="admin-actions">
+              <button class="admin-button" type="submit">Сохранить информацию</button>
+            </div>
+          </form>
+
+          <section class="admin-block" aria-labelledby="adminLinksTitle">
+            <h3 class="admin-block__title" id="adminLinksTitle">Ссылки</h3>
+            <form id="linkForm" class="admin-grid">
+              <label class="admin-field">
+                <span>Название</span>
+                <input id="linkTitleInput" placeholder="Например: YouTube" />
+              </label>
+              <label class="admin-field">
+                <span>URL</span>
+                <input id="linkUrlInput" placeholder="https://example.com" />
+              </label>
+              <div class="admin-actions admin-field--wide">
+                <button class="admin-button" type="submit">Добавить ссылку</button>
+              </div>
+            </form>
+            <div class="admin-list" id="adminLinksList"></div>
+          </section>
+
+          <section class="admin-block" aria-labelledby="adminPeopleTitle">
+            <h3 class="admin-block__title" id="adminPeopleTitle">Люди и аватарки</h3>
+            <form id="personForm" class="admin-form">
+              <input id="personIdInput" type="hidden" />
+              <div class="admin-grid admin-grid--three">
+                <label class="admin-field">
+                  <span>Группа</span>
+                  <select id="personCategoryInput">
+                    <option value="actors">Актёры дубляжа</option>
+                    <option value="sound">Звукорежиссёры</option>
+                    <option value="translators">Переводчики</option>
+                    <option value="editors">Монтажёры</option>
+                  </select>
+                </label>
+                <label class="admin-field">
+                  <span>Имя</span>
+                  <input id="personNameInput" required />
+                </label>
+                <label class="admin-field">
+                  <span>Роль</span>
+                  <input id="personRoleInput" required />
+                </label>
+                <label class="admin-field">
+                  <span>Telegram или ссылка</span>
+                  <input id="personTelegramInput" placeholder="@name или https://..." />
+                </label>
+                <label class="admin-field">
+                  <span>Email</span>
+                  <input id="personEmailInput" type="email" />
+                </label>
+                <label class="admin-field">
+                  <span>Телефон</span>
+                  <input id="personPhoneInput" />
+                </label>
+                <label class="admin-field admin-field--wide">
+                  <span>Специализация</span>
+                  <textarea id="personSpecialtyInput"></textarea>
+                </label>
+                <label class="admin-field admin-field--wide">
+                  <span>Аватарка</span>
+                  <input id="personAvatarInput" type="file" accept="image/*" />
+                </label>
+                <div class="avatar-preview admin-field--wide">
+                  <span class="avatar-preview__image" id="avatarPreview">Нет</span>
+                  <span>После выбора изображения нажмите «Сохранить контакт».</span>
+                </div>
+              </div>
+              <div class="admin-actions">
+                <button class="admin-button" type="submit">Сохранить контакт</button>
+                <button class="admin-button admin-button--ghost" id="personResetButton" type="button">Новый контакт</button>
+              </div>
+            </form>
+            <div class="admin-list" id="adminPeopleList"></div>
+          </section>
+
+          <div class="admin-actions">
+            <button class="admin-button admin-button--ghost" id="adminLogoutButton" type="button">Выйти</button>
+            <button class="admin-button admin-button--danger" id="adminResetButton" type="button">Сбросить локальные данные</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="./script.js"></script>
     <script src="./animations.js"></script>
+    <script src="./contacts.js"></script>
   </body>
 </html>
