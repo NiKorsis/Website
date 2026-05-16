@@ -137,7 +137,7 @@
   const adminLogin = document.querySelector("#adminLogin");
   const adminPassword = document.querySelector("#adminPassword");
   const adminStatus = document.querySelector("#adminStatus");
-  const adminLoginBox = document.querySelector("#adminLoginBox");
+  const adminLoginBox = adminLoginForm;
   const adminWorkspace = document.querySelector("#adminWorkspace");
   const siteSettingsForm = document.querySelector("#siteSettingsForm");
   const contactEmailInput = document.querySelector("#contactEmailInput");
@@ -250,6 +250,10 @@
 
     if (type === "phone") {
       return `tel:${trimmedValue.replace(/[^+\d]/g, "")}`;
+    }
+
+    if (trimmedValue.startsWith("@")) {
+      return `https://t.me/${trimmedValue.slice(1)}`;
     }
 
     if (trimmedValue.startsWith("http://") || trimmedValue.startsWith("https://") || trimmedValue.startsWith("mailto:") || trimmedValue.startsWith("tel:")) {
