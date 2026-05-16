@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KorsDub site — приветственный экран для первого посещения."
+    />
+    <title>KorsDub site</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="site-shell" id="siteShell" aria-label="KorsDub site">
+      <div class="site-shell__brand">KorsDub site</div>
+    </main>
+
+    <section class="welcome" id="welcomeScreen" aria-labelledby="welcomeTitle">
+      <div class="welcome__ambient welcome__ambient--one"></div>
+      <div class="welcome__ambient welcome__ambient--two"></div>
+      <div class="welcome__frame" aria-hidden="true">
+        <span class="welcome__spark welcome__spark--top"></span>
+        <span class="welcome__spark welcome__spark--bottom"></span>
+        <span class="welcome__spark welcome__spark--left"></span>
+        <span class="welcome__spark welcome__spark--right"></span>
+      </div>
+
+      <div class="welcome__content">
+        <h1 class="welcome__title" id="welcomeTitle">
+          Приветствуем вас
+          <span>на нашем сайте</span>
+        </h1>
+
+        <div class="welcome__divider" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <p class="welcome__text">
+          Мы рады видеть вас здесь.
+          <span>Наслаждайтесь вашим опытом.</span>
+        </p>
+
+        <button class="welcome__button" id="enterSiteButton" type="button">
+          <span>Войти на сайт</span>
+          <svg
+            aria-hidden="true"
+            width="34"
+            height="18"
+            viewBox="0 0 34 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 9H31M24 1.5L31.5 9L24 16.5"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
