@@ -5,14 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="KorsDub site — приветственный экран для первого посещения."
+      content="KorsDub site — голос, искусство и эмоции для брендов, роликов и проектов."
     />
     <title>KorsDub site</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="site-shell" id="siteShell" aria-label="KorsDub site">
-      <div class="site-shell__brand">KorsDub site</div>
+    <main class="site-shell" id="siteShell" aria-label="Главная страница KorsDub site">
+      <section class="hero" id="home" aria-labelledby="heroTitle">
+        <div class="hero__noise" aria-hidden="true"></div>
+        <div class="hero__wave hero__wave--left" aria-hidden="true"></div>
+        <div class="hero__wave hero__wave--right" aria-hidden="true"></div>
+
+        <header class="site-header" aria-label="Основная навигация">
+          <a class="brand" href="#home" aria-label="KorsDub site">
+            <span class="brand__mark" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span>Голос. Искусство. Эмоции.</span>
+          </a>
+
+          <nav class="site-nav" aria-label="Разделы сайта">
+            <a href="#about">Обо мне</a>
+            <a href="#services">Услуги</a>
+            <a href="#portfolio">Портфолио</a>
+            <a href="#demo">Демо</a>
+            <a href="#contacts">Контакты</a>
+          </nav>
+
+          <a class="contact-link" href="mailto:studio.voice@gmail.com">
+            <span>Связаться</span>
+            <span class="contact-link__spark" aria-hidden="true"></span>
+          </a>
+        </header>
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Диктор <span></span> Актёр <span></span> Голос бренда</p>
+
+          <h1 class="hero__title" id="heroTitle">
+            <span>Голос,</span>
+            который создаёт
+            <span class="hero__title-line">вашу историю</span>
+          </h1>
+
+          <div class="hero__divider" aria-hidden="true">
+            <span class="hero__divider-line"></span>
+            <span class="voice-mark">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="hero__divider-line"></span>
+          </div>
+
+          <p class="hero__text">
+            Озвучка, которая оживляет смыслы.
+            <span>Профессионально. Чисто. В точку.</span>
+          </p>
+
+          <a class="hero__button" href="#demo">
+            <span>Слушать демо</span>
+            <svg
+              aria-hidden="true"
+              width="34"
+              height="18"
+              viewBox="0 0 34 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 9H31M24 1.5L31.5 9L24 16.5"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <footer class="hero-footer" aria-label="Контакты и социальные сети">
+          <div class="socials">
+            <a href="https://t.me/" aria-label="Telegram">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M21 4.6 17.9 20c-.2 1.1-.8 1.4-1.7.9l-4.7-3.5-2.3 2.2c-.2.3-.5.5-1 .5l.4-4.8L17.4 7c.4-.4-.1-.6-.6-.2L6 13.6 1.4 12.2c-1-.3-1-1 0-1.4l18-7c.8-.3 1.6.2 1.6.8Z" />
+              </svg>
+            </a>
+            <a href="https://vk.com/" aria-label="VK">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M13.2 17.8c-5.4 0-8.5-3.7-8.7-9.8h2.7c.1 4.5 2 6.4 3.5 6.8V8h2.6v3.9c1.5-.2 3-2 3.5-3.9h2.6c-.4 2.3-2.2 4-3.4 4.7 1.2.6 3.1 2.1 3.8 5.1h-2.9c-.5-1.8-1.9-3.2-3.6-3.4v3.4h-.1Z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com/" aria-label="Instagram">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M8 3h8c2.8 0 5 2.2 5 5v8c0 2.8-2.2 5-5 5H8c-2.8 0-5-2.2-5-5V8c0-2.8 2.2-5 5-5Zm0 2c-1.7 0-3 1.3-3 3v8c0 1.7 1.3 3 3 3h8c1.7 0 3-1.3 3-3V8c0-1.7-1.3-3-3-3H8Zm4 3.4a3.6 3.6 0 1 1 0 7.2 3.6 3.6 0 0 1 0-7.2Zm0 2a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2Zm4.4-2.9a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z" />
+              </svg>
+            </a>
+          </div>
+
+          <a class="scroll-cue" href="#about">
+            <span>Листайте вниз</span>
+            <span class="scroll-cue__line" aria-hidden="true"></span>
+          </a>
+
+          <a class="hero-footer__email" href="mailto:studio.voice@gmail.com">
+            studio.voice@gmail.com
+          </a>
+        </footer>
+      </section>
+
+      <section class="section-anchor" id="about" aria-label="Обо мне"></section>
+      <section class="section-anchor" id="services" aria-label="Услуги"></section>
+      <section class="section-anchor" id="portfolio" aria-label="Портфолио"></section>
+      <section class="section-anchor" id="demo" aria-label="Демо"></section>
+      <section class="section-anchor" id="contacts" aria-label="Контакты"></section>
     </main>
 
     <section class="welcome" id="welcomeScreen" aria-labelledby="welcomeTitle">
