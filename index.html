@@ -9,6 +9,7 @@
     />
     <title>KorsDub site</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./animations.css" />
   </head>
   <body>
     <main class="site-shell" id="siteShell" aria-label="Главная страница свободы">
@@ -16,6 +17,11 @@
         <div class="hero__noise" aria-hidden="true"></div>
         <div class="hero__wave hero__wave--left" aria-hidden="true"></div>
         <div class="hero__wave hero__wave--right" aria-hidden="true"></div>
+        <div class="cursor-field" aria-hidden="true">
+          <span class="cursor-field__glow"></span>
+          <span class="cursor-field__ring cursor-field__ring--one"></span>
+          <span class="cursor-field__ring cursor-field__ring--two"></span>
+        </div>
 
         <header class="site-header" aria-label="Навигация">
           <a class="brand" href="#home" aria-label="KorsDub site">
@@ -119,7 +125,7 @@
             <span class="scroll-cue__line" aria-hidden="true"></span>
           </a>
 
-          <a class="hero-footer__email" href="mailto:studio.voice@gmail.com">
+          <a class="hero-footer__email" href="mailto:nikorsis666@gmail.com">
             nikorsis666@gmail.com
           </a>
         </footer>
@@ -180,5 +186,6 @@
     </section>
 
     <script src="./script.js"></script>
+    <script src="./animations.js"></script>
   </body>
 </html>
