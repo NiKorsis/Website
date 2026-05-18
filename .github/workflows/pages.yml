@@ -1,9 +1,10 @@
-name: Deploy static site to Pages
+name: Deploy static site
 
 on:
   push:
     branches:
       - main
+      - gh-pages
   workflow_dispatch:
 
 permissions:
@@ -13,10 +14,13 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,9 +32,7 @@ jobs:
       - name: Prepare static files
         run: |
           mkdir dist
-          cp index.html dist/index.html
-          cp slimevr-trackers.svg dist/slimevr-trackers.svg
-          touch dist/.nojekyll
+          cp index.html styles.css script.js .nojekyll dist/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
